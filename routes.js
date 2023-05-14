@@ -11,7 +11,7 @@ const requestHandler = (req, res) => {
   }
 
   if (url === "/message" && method === "POST") {
-    fs.writeFileSync("AppMessage.txt", "dummy text for 3rd way module exports purpose");
+    fs.writeFileSync("AppMessage.txt", "dummy text for npm installing purpose");
     res.statusCode = 302;
     res.setHeader("Location", "/");
     return res.end();
@@ -29,4 +29,4 @@ const requestHandler = (req, res) => {
 
 // 3rd way to export modules to app.js
 exports.handler = requestHandler
-exports.SomeText = 'some hard code text for 3rd way'
+exports.SomeText = 'some hard code'
